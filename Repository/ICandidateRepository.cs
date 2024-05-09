@@ -2,7 +2,7 @@
 
 namespace SigmaTestTask.Repository
 {
-    public interface IContactRepository
+    public interface ICandidateRepository
     {
         Task<Contact> GetCandidateByEmailAsync(string email);
         Task AddCandidateAsync(Contact contact);

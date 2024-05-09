@@ -8,10 +8,10 @@ namespace SigmaTestTask.Service
 {
     public class CandidateService : ICandidateService
     {
-        private readonly IContactRepository _contactRepository;
+        private readonly ICandidateRepository _contactRepository;
         private readonly IMapper _mapper;
 
-        public CandidateService(IContactRepository contactRepository, IMapper mapper)
+        public CandidateService(ICandidateRepository contactRepository, IMapper mapper)
         {
             _contactRepository = contactRepository;
             _mapper = mapper;

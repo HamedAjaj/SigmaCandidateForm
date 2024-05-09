@@ -4,10 +4,10 @@ using SigmaTestTask.Repository.Data;
 
 namespace SigmaTestTask.Repository
 {
-    public class ContactRepository : IContactRepository
+    public class CandidateRepository : ICandidateRepository
     {
         private readonly CandidateContext _context;
-        public ContactRepository(CandidateContext context)
+        public CandidateRepository(CandidateContext context)
         {
             _context = context;
         }

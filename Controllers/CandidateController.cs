@@ -13,8 +13,6 @@ namespace SigmaTestTask.Controllers
     public class CandidateController : ControllerBase
     {
         private readonly ICandidateService _candidateService;
-        private readonly IMapper _mapper;
-
         public CandidateController(ICandidateService candidateService)
         {
            _candidateService = candidateService;
@@ -28,7 +26,7 @@ namespace SigmaTestTask.Controllers
 
             var result = await _candidateService.AddOrUpdateCandidateAsync(contactDto);
             if (result.IsSuccess)
-                return Ok(result.Message);
+                return Ok(new { result.Message, contactDto });
             else
                 return BadRequest(result.Message);
         }

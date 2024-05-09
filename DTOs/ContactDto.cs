@@ -12,7 +12,8 @@ namespace SigmaTestTask.DTOs
 
         [EmailAddress]
         public string Email { get; set; }
-        [Phone]
+
+        [Phone ,MinLength(10,ErrorMessage ="Phone number must be min length is : 10")]
         public string PhoneNumber { get; set; }
         
         public string PreferredCallTime { get; set; }
