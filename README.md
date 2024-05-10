@@ -25,9 +25,9 @@ Project created to be maintainable  reusable, testable ,scalable
 ### AutoMapper Used
 ### Repository pattern
 # Things that can make it later for big projects : 
-	### UnitOfWork
-	### GenericRepository 
-	### Specification pattern
-	### Middleware to handle bad requests 
-	### Standardize the response style
+	 UnitOfWork
+	 GenericRepository 
+	 Specification pattern
+	 Middleware to handle bad requests 
+	 Standardize the response style
 	
