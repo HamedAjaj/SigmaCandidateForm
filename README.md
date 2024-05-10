@@ -5,25 +5,27 @@ Project created to be maintainable  reusable, testable ,scalable
 
 ## consist of 4 layers
 ####	1 - API Layer or called { Presentation Layer} 	
-	####	- Configurations
-	####	- Helpers [ MappingProfile , Response class]
-	####	- Controllers
-	####	- DTOs
+		- Configurations
+		- Helpers [ MappingProfile , Response class]
+		- Controllers
+		- DTOs
 ####	2 - Domain Layer 
-	####	- Entities  [ SQL Server Provider ]
+		- Entities  [ SQL Server Provider ]
 ###	3 - Repository Layer or called 'Infrastructure'
-	####	- packages 
-	####	- Config
-	#####		- To apply constraints of Entity at Domain using fluent API instead of Data Annotation [Code Style ]
-	####	- Migrations
-	####	- Implementation to Access Data Source
+		- packages 
+		- Config
+			- To apply constraints of Entity at Domain using fluent API instead of Data Annotation [Code Style ]
+		- Migrations
+		- Implementation to Access Data Source
 ###	4 - Service Layer 
-	####	- Business logic on data before sending to repository
+		- Business logic on data before sending to repository
 
 
-### // Execute  update-database automatically without make it [ manually => 'update-database' ]  
+###  Execute  update-database automatically without make it manually [ manually => 'update-database' ]  
 ### AutoMapper Used
 ### Repository pattern
+### Clean Code
+### unit Test - XUnit package
 # Things that can make it later for big projects : 
 	 UnitOfWork
 	 GenericRepository 
