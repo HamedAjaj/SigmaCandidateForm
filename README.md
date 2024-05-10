@@ -24,7 +24,7 @@ consist of 4 layers
 ### // Execute  update-database automatically without make it [ manually => 'update-database' ]  
 ### AutoMapper Used
 ### Repository pattern
-# Things can make it later for big projects
+# Things that can make it later for big projects
 	### UnitOfWork
 	### GenericRepository 
 	### Specification pattern
