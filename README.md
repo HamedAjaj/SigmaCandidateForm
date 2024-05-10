@@ -26,10 +26,11 @@ Project created to be maintainable  reusable, testable ,scalable
 ### Repository pattern
 ### Clean Code
 ### unit Test - XUnit package
-# Things that can make it later for big projects : 
+# improvements  : Things that can make it later for big projects : 
 	 UnitOfWork
 	 GenericRepository 
 	 Specification pattern
-	 Middleware to handle bad requests 
-	 Standardize the response style
+	 Middleware to handle all requests 
+	 Standardize the response style 
+  	 Clean Architecture or any architecture according to the project’s business :)
 	
