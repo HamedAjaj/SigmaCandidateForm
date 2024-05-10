@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SigmaTestTask.Repository.Data;
 
@@ -11,9 +12,11 @@ using SigmaTestTask.Repository.Data;
 namespace SigmaTestTask.Repository.Data.Migrations
 {
     [DbContext(typeof(CandidateContext))]
-    partial class CandidateContextModelSnapshot : ModelSnapshot
+    [Migration("20240509155604_deleteGuidId")]
+    partial class deleteGuidId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

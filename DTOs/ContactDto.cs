@@ -15,8 +15,10 @@ namespace SigmaTestTask.DTOs
 
         [Phone ,MinLength(10,ErrorMessage ="Phone number must be min length is : 10")]
         public string PhoneNumber { get; set; }
-        
-        public string PreferredCallTime { get; set; }
+
+        // may be enum like ['morning','evening',...]
+        public DateTime PreferredCallTime { get; set; }
+
 
         [StringLength(250)]
         public string LinkedInProfileUrl { get; set; }

@@ -17,7 +17,7 @@ namespace SigmaTestTask.Repository
         
         public async Task<Contact> GetCandidateByEmailAsync(string email) { 
            return await _context.Contacts.AsNoTracking().
-                Where(x => x.Email == email.ToLower()).FirstOrDefaultAsync();
+                Where(x => x.Email.ToLower() == email.ToLower()).FirstOrDefaultAsync();
         }
 
         public void UpdateCandidate(Contact contact) => _context.Contacts.Update(contact);
