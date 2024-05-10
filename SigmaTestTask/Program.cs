@@ -9,7 +9,7 @@ namespace SigmaTestTask
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +28,27 @@ namespace SigmaTestTask
             builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
             builder.Services.AddScoped<ICandidateService, CandidateService>();
             builder.Services.AddAutoMapper(typeof(MappingProfile));
+
             var app = builder.Build();
+
+
+            // Execute  update-database automatically without make it manually  
+            using var scope = app.Services.CreateScope();
+            var services = scope.ServiceProvider;
+            var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+            try
+            {
+                var dbContext = services.GetRequiredService<CandidateContext>();
+                await dbContext.Database.MigrateAsync();
+            }
+            catch (Exception ex)
+            {
+                var logger = loggerFactory.CreateLogger<Program>();
+                logger.LogError(ex, "An error occured during  apply the migration ");
+            }
+
+
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

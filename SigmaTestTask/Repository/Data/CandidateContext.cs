@@ -14,11 +14,11 @@ namespace SigmaTestTask.Repository.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // apply fluent api configuration file at Repository/Data.Config
+            // apply fluent api configuration file at Repository/Data/Config
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-        public DbSet<Candidate> Contacts { get; set; }
+        public DbSet<Candidate> Candidates { get; set; }
     }
 }

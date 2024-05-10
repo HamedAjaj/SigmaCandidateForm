@@ -39,7 +39,7 @@ namespace SigmaTestTask.Tests
         public async Task AddOrEdit_ReturnsOk_WhenCandidateAddedOrUpdatedSuccessfully()
         {
             // Arrange
-            var contactDto = new CandidateDto { 
+            var candidateDto = new CandidateDto { 
                 Email = "test@example.com",
                 FirstName = "string",
                 LastName = "string",
@@ -51,11 +51,11 @@ namespace SigmaTestTask.Tests
             };
 
             var serviceResult = new Result { IsSuccess = true, Message = "Form Added Successfully" };
-            _mockService.Setup(s => s.AddOrUpdateCandidateAsync(contactDto))
+            _mockService.Setup(s => s.AddOrUpdateCandidateAsync(candidateDto))
                         .ReturnsAsync(serviceResult);
 
             // Act
-            var result = await _controller.AddOrEdit(contactDto);
+            var result = await _controller.AddOrEdit(candidateDto);
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);

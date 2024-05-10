@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SigmaTestTask.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a979b62184f039ed4fdf7c24b97a7778ab5ca08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62aa47f343b4f690e392ce1e10789e796c0b2438")]
 [assembly: System.Reflection.AssemblyProductAttribute("SigmaTestTask.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SigmaTestTask.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -69,7 +69,7 @@ namespace SigmaTestTask.Repository.Data.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Contacts");
+                    b.ToTable("Candidates");
                 });
 #pragma warning restore 612, 618
         }

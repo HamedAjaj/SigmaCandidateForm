@@ -13,11 +13,11 @@ namespace SigmaTestTask.Repository.Data.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "Id",
-                table: "Contacts");
+                table: "Candidates");
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "PreferredCallTime",
-                table: "Contacts",
+                table: "Candidates",
                 type: "datetime2",
                 nullable: false,
                 oldClrType: typeof(string),
@@ -29,7 +29,7 @@ namespace SigmaTestTask.Repository.Data.Migrations
         {
             migrationBuilder.AlterColumn<string>(
                 name: "PreferredCallTime",
-                table: "Contacts",
+                table: "Candidates",
                 type: "nvarchar(max)",
                 nullable: false,
                 oldClrType: typeof(DateTime),
@@ -37,7 +37,7 @@ namespace SigmaTestTask.Repository.Data.Migrations
 
             migrationBuilder.AddColumn<Guid>(
                 name: "Id",
-                table: "Contacts",
+                table: "Candidates",
                 type: "uniqueidentifier",
                 nullable: false,
                 defaultValue: new Guid("00000000-0000-0000-0000-000000000000"));

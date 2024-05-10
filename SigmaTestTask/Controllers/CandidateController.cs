@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SigmaTestTask.Domain;
 using SigmaTestTask.DTOs;
+using SigmaTestTask.Helper;
 using SigmaTestTask.Repository;
 using SigmaTestTask.Service;
 
@@ -18,8 +19,10 @@ namespace SigmaTestTask.Controllers
            _candidateService = candidateService;
         }
 
+        // ActionResult<Result> shows the response's format to assist the front-end developer.
+
         [HttpPost("AddOrEdit")]
-        public async Task<ActionResult<CandidateDto>> AddOrEdit( [FromBody] CandidateDto contactDto)
+        public async Task<ActionResult<Result>> AddOrEdit( [FromBody] CandidateDto contactDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

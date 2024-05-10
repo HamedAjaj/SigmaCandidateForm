@@ -16,13 +16,13 @@ namespace SigmaTestTask.Repository
         //    await _context.AddAsync(contact);
         
         public async Task<Candidate> GetCandidateByEmailAsync(string email) { 
-           return await _context.Contacts.AsNoTracking().
+           return await _context.Candidates.AsNoTracking().
                 Where(x => x.Email.ToLower() == email.ToLower()).FirstOrDefaultAsync();
         }
 
-        public void UpdateCandidate(Candidate contact) => _context.Contacts.Update(contact);
+        public void UpdateCandidate(Candidate contact) => _context.Candidates.Update(contact);
 
-        public async Task AddCandidateAsync(Candidate contact) =>await _context.Contacts.AddAsync(contact);
+        public async Task AddCandidateAsync(Candidate contact) =>await _context.Candidates.AddAsync(contact);
     
         public async Task Complete()
         {

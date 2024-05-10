@@ -12,7 +12,7 @@ namespace SigmaTestTask.Repository.Data.Migrations
         {
             migrationBuilder.CreateIndex(
                 name: "IX_Contacts_Email",
-                table: "Contacts",
+                table: "Candidates",
                 column: "Email",
                 unique: true);
         }
@@ -22,7 +22,7 @@ namespace SigmaTestTask.Repository.Data.Migrations
         {
             migrationBuilder.DropIndex(
                 name: "IX_Contacts_Email",
-                table: "Contacts");
+                table: "Candidates");
         }
     }
 }
