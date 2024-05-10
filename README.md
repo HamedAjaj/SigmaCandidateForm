@@ -33,6 +33,6 @@ Project created to be maintainable  reusable, testable ,scalable
 	 Middleware to handle all requests 
 	 Standardize the response style 
   	 Clean Architecture or any architecture according to the project’s business :)
-### If I find other ideas, I will write them in the Readmi here.
+### If I find other ideas, I will write them  here.
 ### Thanks  😊  
 	
