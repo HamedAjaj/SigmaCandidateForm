@@ -4,10 +4,12 @@ namespace SigmaTestTask.DTOs
 {
     public class CandidateDto
     {
-        [StringLength(50)]
+        [MinLength(3, ErrorMessage = " FirstName must be more than or equal : 3 ")]
+        [MaxLength(50, ErrorMessage = " FirstName must be less than : 50 characters")]
         public string FirstName { get; set; }
 
-        [StringLength(50)]
+        [MinLength(3, ErrorMessage = " LastName must be more than or equal : 3 ")]
+        [MaxLength(50 ,ErrorMessage = " LastName must be less than : 50 characters")]
         public string LastName { get; set; }
 
         [EmailAddress]
@@ -17,16 +19,19 @@ namespace SigmaTestTask.DTOs
         public string PhoneNumber { get; set; }
 
         // may be enum like ['morning','evening',...]
+        [Required]
         public DateTime PreferredCallTime { get; set; }
 
-
-        [StringLength(250)]
+        [Required]
+        [MaxLength(250)]
         public string LinkedInProfileUrl { get; set; }
 
-        [StringLength(250)]
+        [Required]
+        [MaxLength(250)]
         public string GithubProfileUrl { get; set; }
 
-        [StringLength(500)]
+        [Required]
+        [MaxLength(500)]
         public string Comment { get; set; }
     }
 }

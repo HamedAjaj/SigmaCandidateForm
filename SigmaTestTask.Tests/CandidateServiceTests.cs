@@ -52,7 +52,7 @@ namespace SigmaTestTask.Tests
         }
 
         [Fact]
-        public async Task AddOrUpdateCandidateAsync_NewCandidate_ShouldAddAndReturnFormaAddedSuccessfully()
+        public async Task AddOrUpdateCandidateAsync_NewCandidate_ShouldAddAndReturnFormaCreatedSuccessfully()
         {
             // Arrange
             var contactDto = candidateDTODemoObject;
@@ -65,7 +65,7 @@ namespace SigmaTestTask.Tests
 
             // Assert
             Assert.True(result.IsSuccess);
-            Assert.Equal("Form Added Successfully", result.Message);
+            Assert.Equal("Created Successfully", result.Message);
             _mockRepository.Verify(r => r.AddCandidateAsync(It.IsAny<Candidate>()), Times.Once);
             _mockRepository.Verify(r => r.Complete(), Times.Once);
         }
@@ -84,7 +84,7 @@ namespace SigmaTestTask.Tests
 
             // Assert
             Assert.True(result.IsSuccess);
-            Assert.Equal("Form Updated Successfully", result.Message);
+            Assert.Equal("Updated Successfully", result.Message);
             _mockMapper.Verify(m => m.Map(contactDto, existingContact));
             _mockRepository.Verify(r => r.UpdateCandidate(It.IsAny<Candidate>()));
             _mockRepository.Verify(r => r.Complete());

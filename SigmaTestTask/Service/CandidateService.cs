@@ -33,7 +33,7 @@ namespace SigmaTestTask.Service
             try
             {
                 await _contactRepository.Complete();
-                return new Result { IsSuccess = true, Message = existingCandidate == null ? "Form Added Successfully" : "Form Updated Successfully" };
+                return new Result { IsSuccess = true, Message = existingCandidate == null ? "Created Successfully" : "Updated Successfully" };
             }
             catch (Exception ex)
             {

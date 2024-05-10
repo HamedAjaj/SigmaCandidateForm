@@ -36,7 +36,7 @@ namespace SigmaTestTask.Tests
 
 
         [Fact]
-        public async Task AddOrEdit_ReturnsOk_WhenCandidateAddedOrUpdatedSuccessfully()
+        public async Task AddOrEdit_ReturnsOk_WhenCandidateCreatedOrUpdatedSuccessfully()
         {
             // Arrange
             var candidateDto = new CandidateDto { 
@@ -50,7 +50,7 @@ namespace SigmaTestTask.Tests
                 Comment = "string"
             };
 
-            var serviceResult = new Result { IsSuccess = true, Message = "Form Added Successfully" };
+            var serviceResult = new Result { IsSuccess = true, Message = "Created Successfully" };
             _mockService.Setup(s => s.AddOrUpdateCandidateAsync(candidateDto))
                         .ReturnsAsync(serviceResult);
 
@@ -61,7 +61,7 @@ namespace SigmaTestTask.Tests
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
             Console.WriteLine(okResult.Value);
             Assert.NotNull(okResult.Value);
-            Assert.Equivalent(new { IsSuccess=true , Message = "Form Added Successfully" }, okResult.Value);
+            Assert.Equivalent(new { IsSuccess=true , Message = "Created Successfully" }, okResult.Value);
         }
 
     }
