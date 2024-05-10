@@ -21,7 +21,7 @@ namespace SigmaTestTask.Tests
         private readonly CandidateService _candidateService;
 
 
-        Contact existingCandidate_DemoObject =  new Contact {
+        Candidate existingCandidate_DemoObject =  new Candidate {
                 Email = "hamed.aja@gmail.com",
                 FirstName = "Hamed",
                 LastName = "Farag",
@@ -32,7 +32,7 @@ namespace SigmaTestTask.Tests
                 Comment = "ertertert"
             };
 
-         ContactDto candidateDTODemoObject = new  ContactDto
+         CandidateDto candidateDTODemoObject = new  CandidateDto
         {
             Email = "test@example.com",
             FirstName = "string",
@@ -57,8 +57,8 @@ namespace SigmaTestTask.Tests
             // Arrange
             var contactDto = candidateDTODemoObject;
 
-            _mockRepository.Setup(r => r.GetCandidateByEmailAsync(contactDto.Email)).ReturnsAsync((Contact)null);
-            _mockMapper.Setup(m => m.Map<Contact>(contactDto)).Returns(new Contact { });
+            _mockRepository.Setup(r => r.GetCandidateByEmailAsync(contactDto.Email)).ReturnsAsync((Candidate)null);
+            _mockMapper.Setup(m => m.Map<Candidate>(contactDto)).Returns(new Candidate { });
 
             // Act
             var result = await _candidateService.AddOrUpdateCandidateAsync(contactDto);
@@ -66,7 +66,7 @@ namespace SigmaTestTask.Tests
             // Assert
             Assert.True(result.IsSuccess);
             Assert.Equal("Form Added Successfully", result.Message);
-            _mockRepository.Verify(r => r.AddCandidateAsync(It.IsAny<Contact>()), Times.Once);
+            _mockRepository.Verify(r => r.AddCandidateAsync(It.IsAny<Candidate>()), Times.Once);
             _mockRepository.Verify(r => r.Complete(), Times.Once);
         }
 
@@ -86,7 +86,7 @@ namespace SigmaTestTask.Tests
             Assert.True(result.IsSuccess);
             Assert.Equal("Form Updated Successfully", result.Message);
             _mockMapper.Verify(m => m.Map(contactDto, existingContact));
-            _mockRepository.Verify(r => r.UpdateCandidate(It.IsAny<Contact>()));
+            _mockRepository.Verify(r => r.UpdateCandidate(It.IsAny<Candidate>()));
             _mockRepository.Verify(r => r.Complete());
         }
 
@@ -95,7 +95,7 @@ namespace SigmaTestTask.Tests
         {
             // Arrange
             var contactDto = candidateDTODemoObject;
-            _mockRepository.Setup(r => r.GetCandidateByEmailAsync(contactDto.Email)).ReturnsAsync((Contact)null);
+            _mockRepository.Setup(r => r.GetCandidateByEmailAsync(contactDto.Email)).ReturnsAsync((Candidate)null);
             _mockRepository.Setup(r => r.Complete()).ThrowsAsync(new Exception());
 
             // Act

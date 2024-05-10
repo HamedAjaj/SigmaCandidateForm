@@ -8,7 +8,7 @@ namespace SigmaTestTask.Helper
     {
         public MappingProfile()
         {
-            CreateMap<Contact,ContactDto>().ReverseMap();
+            CreateMap<Candidate,CandidateDto>().ReverseMap();
         }
     }
 }

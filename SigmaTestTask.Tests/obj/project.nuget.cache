@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ndaAZJ4gE7Adru2IQ/vngYzJPqfxJ3jLCK0W55h4E3BIb22/jmTz8wTcj6MXofh4Fns3JfYxO8BVw1bfLaXPUg==",
+  "dgSpecHash": "fA/Nife8OqwzL79VbvTCwwKmyeTzRmdWIGU/krNJvBifXUc1Fy1Zci+USlNyhJAqocUy1EWvXhR2+c8c6ptlzA==",
   "success": true,
-  "projectFilePath": "D:\\New folder\\Tasks\\SigmaTestTask.Tests\\SigmaTestTask.Tests.csproj",
+  "projectFilePath": "C:\\Users\\dynabook\\Desktop\\test\\SigmaTestTask\\SigmaTestTask.Tests\\SigmaTestTask.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dynabook\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\dynabook\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

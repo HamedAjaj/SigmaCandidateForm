@@ -28,7 +28,7 @@ namespace SigmaTestTask.Tests
             _controller.ModelState.AddModelError("Email", "Email is required");
 
             // Act
-            var result = await _controller.AddOrEdit(new ContactDto());
+            var result = await _controller.AddOrEdit(new CandidateDto());
 
             // Assert
             Assert.IsType<BadRequestObjectResult>(result.Result);
@@ -39,7 +39,7 @@ namespace SigmaTestTask.Tests
         public async Task AddOrEdit_ReturnsOk_WhenCandidateAddedOrUpdatedSuccessfully()
         {
             // Arrange
-            var contactDto = new ContactDto { 
+            var contactDto = new CandidateDto { 
                 Email = "test@example.com",
                 FirstName = "string",
                 LastName = "string",

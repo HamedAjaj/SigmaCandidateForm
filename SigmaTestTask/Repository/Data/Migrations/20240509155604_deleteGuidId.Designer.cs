@@ -25,7 +25,7 @@ namespace SigmaTestTask.Repository.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("SigmaTestTask.Domain.Contact", b =>
+            modelBuilder.Entity("SigmaTestTask.Domain.Candidate", b =>
                 {
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(450)");

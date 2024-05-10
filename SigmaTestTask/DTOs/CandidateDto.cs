@@ -2,7 +2,7 @@
 
 namespace SigmaTestTask.DTOs
 {
-    public class ContactDto
+    public class CandidateDto
     {
         [StringLength(50)]
         public string FirstName { get; set; }

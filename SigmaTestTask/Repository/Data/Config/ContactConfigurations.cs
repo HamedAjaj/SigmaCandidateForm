@@ -5,9 +5,9 @@ using System.Reflection.Emit;
 
 namespace SigmaTestTask.Repository.Data.Config
 {
-    public class ContactConfigurations : IEntityTypeConfiguration<Contact>
+    public class ContactConfigurations : IEntityTypeConfiguration<Candidate>
     {
-        public void Configure(EntityTypeBuilder<Contact> builder)
+        public void Configure(EntityTypeBuilder<Candidate> builder)
         {
 
             builder.HasIndex(c => c.Email).IsUnique();

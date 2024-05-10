@@ -12,17 +12,17 @@ namespace SigmaTestTask.Repository
             _context = context;
         }
 
-        //public async Task AddCandidateAsync(Contact contact)=>
+        //public async Task AddCandidateAsync(Candidate contact)=>
         //    await _context.AddAsync(contact);
         
-        public async Task<Contact> GetCandidateByEmailAsync(string email) { 
+        public async Task<Candidate> GetCandidateByEmailAsync(string email) { 
            return await _context.Contacts.AsNoTracking().
                 Where(x => x.Email.ToLower() == email.ToLower()).FirstOrDefaultAsync();
         }
 
-        public void UpdateCandidate(Contact contact) => _context.Contacts.Update(contact);
+        public void UpdateCandidate(Candidate contact) => _context.Contacts.Update(contact);
 
-        public async Task AddCandidateAsync(Contact contact) =>await _context.Contacts.AddAsync(contact);
+        public async Task AddCandidateAsync(Candidate contact) =>await _context.Contacts.AddAsync(contact);
     
         public async Task Complete()
         {

@@ -19,6 +19,6 @@ namespace SigmaTestTask.Repository.Data
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Candidate> Contacts { get; set; }
     }
 }

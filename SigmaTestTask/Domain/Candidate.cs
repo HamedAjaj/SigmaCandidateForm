@@ -2,7 +2,7 @@
 
 namespace SigmaTestTask.Domain
 {
-    public class Contact
+    public class Candidate
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

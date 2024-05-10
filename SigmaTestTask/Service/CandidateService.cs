@@ -17,13 +17,13 @@ namespace SigmaTestTask.Service
             _mapper = mapper;
         }
 
-        public async Task<Result> AddOrUpdateCandidateAsync(ContactDto contactDto)
+        public async Task<Result> AddOrUpdateCandidateAsync(CandidateDto contactDto)
         {
             var existingCandidate = await _contactRepository.GetCandidateByEmailAsync(contactDto.Email);
 
             if (existingCandidate == null)
             {
-                await _contactRepository.AddCandidateAsync(_mapper.Map<Contact>(contactDto));
+                await _contactRepository.AddCandidateAsync(_mapper.Map<Candidate>(contactDto));
             }
             else
             {

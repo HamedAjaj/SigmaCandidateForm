@@ -19,7 +19,7 @@ namespace SigmaTestTask.Controllers
         }
 
         [HttpPost("AddOrEdit")]
-        public async Task<ActionResult<ContactDto>> AddOrEdit( [FromBody] ContactDto contactDto)
+        public async Task<ActionResult<CandidateDto>> AddOrEdit( [FromBody] CandidateDto contactDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

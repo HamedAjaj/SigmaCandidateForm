@@ -5,7 +5,7 @@ namespace SigmaTestTask.Service
 {
     public interface ICandidateService
     {
-        Task<Result> AddOrUpdateCandidateAsync(ContactDto contactDto);
+        Task<Result> AddOrUpdateCandidateAsync(CandidateDto contactDto);
 
     }
 
